@@ -42,7 +42,7 @@ $ yarn global add yo generator-office
 
 ### Reference URLs
 
-https://docs.microsoft.com/ja-jp/office/dev/add-ins/develop/develop-add-ins-vscode
-https://docs.microsoft.com/ja-jp/office/dev/add-ins/quickstarts/word-quickstart?tabs=yeomangenerator
-https://docs.microsoft.com/ja-jp/office/dev/add-ins/develop/add-in-manifests?tabs=tabid-1
-https://docs.microsoft.com/en-us/office/dev/add-ins/overview/office-add-in-code-samples
+- https://docs.microsoft.com/ja-jp/office/dev/add-ins/develop/develop-add-ins-vscode
+- https://docs.microsoft.com/ja-jp/office/dev/add-ins/quickstarts/word-quickstart?tabs=yeomangenerator
+- https://docs.microsoft.com/ja-jp/office/dev/add-ins/develop/add-in-manifests?tabs=tabid-1
+- https://docs.microsoft.com/en-us/office/dev/add-ins/overview/office-add-in-code-samples
