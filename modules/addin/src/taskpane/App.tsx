@@ -3,6 +3,7 @@ import * as React from "react";
 import { Header } from "./components/Header";
 import { HeroList, HeroListItemProps } from "./components/HeroList";
 import Progress from "./components/Progress";
+import { addKaneko } from "./scripts/add-kaneko.script";
 
 /* global Word, require */
 
@@ -45,22 +46,6 @@ export default class App extends React.Component<AppProps, AppState> {
     });
   }
 
-  click = async () => {
-    return Word.run(async (context) => {
-      /**
-       * Insert your Word code here
-       */
-
-      // insert a paragraph at the end of the document.
-      const paragraph = context.document.body.insertParagraph("Hello World", Word.InsertLocation.end);
-
-      // change the paragraph color to blue.
-      paragraph.font.color = "blue";
-
-      await context.sync();
-    });
-  };
-
   render() {
     const { title, isOfficeInitialized } = this.props;
 
@@ -68,7 +53,7 @@ export default class App extends React.Component<AppProps, AppState> {
       return (
         <Progress
           title={title}
-          logo={require("./../../assets/logo-filled.png")}
+          logo={require("./../../assets/cct_logo-filled.png")}
           message="Please side load your addin to see app body."
         />
       );
@@ -76,12 +61,12 @@ export default class App extends React.Component<AppProps, AppState> {
 
     return (
       <div className="ms-welcome">
-        <Header logo={require("./../../assets/logo-filled.png")} title={this.props.title} message="Welcome" />
+        <Header logo={require("./../../assets/cct_logo-filled.png")} title={this.props.title} message="Welcome" />
         <HeroList message="Discover what Office Add-ins can do for you today!" items={this.state.listItems}>
           <p className="ms-font-l">
             Modify the source files, then click <b>Run</b>.
           </p>
-          <DefaultButton className="ms-welcome__action" iconProps={{ iconName: "ChevronRight" }} onClick={this.click}>
+          <DefaultButton className="ms-welcome__action" iconProps={{ iconName: "ChevronRight" }} onClick={addKaneko}>
             Run
           </DefaultButton>
         </HeroList>
